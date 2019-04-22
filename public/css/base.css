@@ -1,0 +1,12 @@
+.logo {
+  margin-top: 10vh;
+  width: 15vmax;
+  height: 15vmax;
+}
+
+.meta {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 1.5vmax;
+}
