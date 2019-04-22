@@ -3,15 +3,16 @@ services:
   - docker
 
 before_install:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker pull adzo261/express-cicd
-  - docker run --name adzo261-express-cicd -p 80:3000 -d adzo261/express-cicd
-  - docker ps -a
+  - docker build -t adzo261/express-cicd -f Dockerfile .
 
 script:
   - docker run adzo261/express-cicd npm run test
 
-#after_success:
+after_success:
+  #log in to docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  #take built images and push to DOcker hub
+  - docker push adzo261/express-cicd
 
 deploy:
   provider: elasticbeanstalk
@@ -19,7 +20,7 @@ deploy:
   app: "express-cicd"
   env: "ExpressCicd-env"
   bucket_name: "elasticbeanstalk-us-east-1-601011524156"
-  bucket_path: "docker-web-app"
+  bucket_path: "express-cicd"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
