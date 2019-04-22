@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/adzo261/example-cicd.svg?branch=master)](https://travis-ci.org/adzo261/example-cicd)
+[![Build Status](https://travis-ci.org/adzo261/express-cicd.svg?branch=master)](https://travis-ci.org/adzo261/express-cicd)
 ## express-cicd
 
 
