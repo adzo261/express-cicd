@@ -18,7 +18,7 @@ deploy:
   region: "us-east-1"
   app: "express-cicd"
   env: "ExpressCicd-env"
-  bucket_name: "elasticbeanstalk-us-west-1-882324140720"
+  bucket_name: "elasticbeanstalk-us-east-1-601011524156"
   bucket_path: "docker-web-app"
   on:
     branch: master
