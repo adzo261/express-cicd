@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/adzo261/example-cicd.svg?branch=master)](https://travis-ci.org/adzo261/example-cicd)
-## example-cicd
+## express-cicd
 
 
 An example of node+express web application with custom CI/CD pipeline using Travis CI, docker and AWS.
